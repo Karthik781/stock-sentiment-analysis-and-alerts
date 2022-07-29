@@ -16,12 +16,12 @@ def search_tweets(stock):
 
 
 def handler(event, context):
-    stocks = ['mirza int', 'roto pumps', 'kpit', 'birlasoft']
+    stocks = ['mirza int', 'roto pumps', 'kpit', 'birlasoft', 'laurus labs', 'gnfc']
     for stock in stocks:
         res = search_tweets(stock)
         filtered = list(filter(parse_data, res.data))
         print(res)
-        if filtered.__len__() > 2 :
+        if filtered.__len__() > 5 :
             print(stock + ' is breaking out')
         else:
             print(stock + ' is still weak')
