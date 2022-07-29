@@ -16,7 +16,7 @@ def search_tweets(stock):
 
 
 def handler(event, context):
-    stocks = ['mirza int', 'roto pumps', 'kpit']
+    stocks = ['mirza int', 'roto pumps', 'kpit', 'birlasoft']
     for stock in stocks:
         res = search_tweets(stock)
         filtered = list(filter(parse_data, res.data))
